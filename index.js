@@ -2,15 +2,11 @@ function postComment() {
   var comment = document.getElementById("commentContent").value
   var author = document.getElementById("commentAuthor").value
 
-  var commentsTemplate = document.getElementById("comments-template").innerHTML
-  var templateFn = _.template(commentTemplate)
-  var mainDiv = document.getElementsByTagName('main')[0].innerHTML
-  var templateHTML = templateFn()
-  mainDiv.innerHTML += templateHTML
+  
 }
 
 function createPost() {
-
+  
   var title = document.getElementById("postTitle").value
   var author = document.getElementById("postAuthor").value
   var content = document.getElementById("postBody").value
@@ -27,5 +23,13 @@ function createPost() {
   var mainDiv = document.getElementsByTagName('main')[0].innerHTML
   var pageTemplateHTML = pageTemplateFn({'post': post})
   mainDiv.innerHTML += pageTemplateHTML
+
+  // you gotta inser the comments-template when a post is created
+
+  var commentsTemplate = document.getElementById("comments-template").innerHTML
+  var commentsTemplateFn = _.template(commentsTemplate)
+  var mainDiv = document.getElementsByTagName('main')[0].innerHTML
+  var commentsTemplateHTML = commentsTemplateFn()
+  mainDiv.innerHTML += commentsTemplateHTML
 
 }
