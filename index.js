@@ -17,8 +17,7 @@ function createPost() {
 
   var postTemplate = document.getElementById("post-template").innerHTML
   var postTemplateFn = _.template(postTemplate)
-  var postElement = document.getElementById("post")
-  var templateHTML = postTemplateFn({ 'title': title, 'author': author, 'content': content})
+  var post = postTemplateFn({ 'title': title, 'author': author, 'content': content})
 
   // you gotta insert the post template in the page template
   // then you gotta insert the page template in the main div
