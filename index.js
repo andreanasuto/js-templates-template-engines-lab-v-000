@@ -2,11 +2,16 @@ function postComment() {
   var comment = document.getElementById("commentContent").value
   var author = document.getElementById("commentAuthor").value
 
-  
+  var commentsTemplate = document.getElementById("comment-template").innerHTML
+  var commentsTemplateFn = _.template(commentsTemplate)
+  var mainDiv = document.getElementsByTagName('main')[0].innerHTML
+  var commentTemplateHTML = commentsTemplateFn({'comment': comment, 'author': author})
+  mainDiv.innerHTML += commentTemplateHTML
+
 }
 
 function createPost() {
-  
+
   var title = document.getElementById("postTitle").value
   var author = document.getElementById("postAuthor").value
   var content = document.getElementById("postBody").value
