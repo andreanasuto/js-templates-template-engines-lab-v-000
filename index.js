@@ -19,7 +19,7 @@ function createPost() {
   var postTemplate = document.getElementById("post-template").innerHTML
   var pagetemplateFn = _.template(pageTemplate)
   var templateFn = _.template(postTemplate)
-  var postElement = document.getElementById("post-template")
+  var postElement = document.getElementById("post")
   var templateHTML = templateFn({ 'title': title, 'author': author, 'content': content})
   postElement.innerHTML += templateHTML
 
