@@ -26,6 +26,6 @@ function createPost() {
   var pageTemplateFn = _.template(pageTemplate)
   var mainDiv = document.getElementsByTagName('main')[0].innerHTML
   var pageTemplateHTML = pageTemplateFn({'post': post})
-  mainDiv.innerHTML += templateHTML
+  mainDiv.innerHTML += pageTemplateHTML
 
 }
