@@ -28,7 +28,6 @@ function createPost() {
 }
 
 function postComment() {
-  var author = document.getElementById("commentAuthor").value
 
   var commentTemplate = document.getElementById("comment-template").innerHTML
   var commentTemplateFn = _.template(commentTemplate)
