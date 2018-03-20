@@ -2,8 +2,8 @@ function postComment() {
   var comment = document.getElementById("commentContent").value
   var author = document.getElementById("commentAuthor").value
 
-  var commentsTemplate = document.getElementById("comment-template").innerHTML
-  var commentsTemplateFn = _.template(commentsTemplate)
+  var commentTemplate = document.getElementById("comment-template").innerHTML
+  var commentTemplateFn = _.template(commentTemplate)
   var mainDiv = document.getElementsByTagName('main')[0].innerHTML
   var commentTemplateHTML = commentsTemplateFn({'comment': comment, 'author': author})
   mainDiv.innerHTML += commentTemplateHTML
