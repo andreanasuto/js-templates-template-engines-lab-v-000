@@ -14,6 +14,7 @@ function createPost() {
   var title = document.getElementById("postTitle").value
   var author = document.getElementById("postAuthor").value
   var content = document.getElementById("postBody").value
+  var pageTemplate = document.getElementById("page-template").innerHTML
 
   var postTemplate = document.getElementById("post-template").innerHTML
   var pagetemplateFn = _.template(pageTemplate)
