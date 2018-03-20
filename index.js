@@ -2,7 +2,7 @@ function postComment() {
   var comment = document.getElementById("commentContent").value
   var author = document.getElementById("commentAuthor").value
 
-  var commentTemplate = document.getElementById("comment-template").innerHTML
+  var commentTemplate = document.getElementById("comments-template").innerHTML
   var templateFn = _.template(commentTemplate)
   var mainDiv = document.getElementsByTagName('main')[0].innerHTML
   var templateHTML = templateFn({ 'comment': comment, 'author': author})
