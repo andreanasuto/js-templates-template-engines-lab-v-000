@@ -4,7 +4,7 @@ function postComment() {
 
   var commentTemplate = document.getElementById("comment-template").innerHTML
   var templateFn = _.template(commentTemplate)
-  var commentsDiv = document.getElementById("comment")
+  var mainDiv = document.getElementsByTagName('main')[0].innerHTML
   var templateHTML = templateFn({ 'comment': comment, 'author': author})
   commentsElements.innerHTML += templateHTML
 }
