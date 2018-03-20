@@ -25,7 +25,6 @@ function createPost() {
   var commentsTemplateHTML = commentsTemplateFn()
   postDiv.innerHTML += commentsTemplateHTML
 
-  console.log(postDiv.innerHTML);
 }
 
 function postComment() {
