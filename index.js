@@ -1,15 +1,3 @@
-function postComment() {
-  var comment = document.getElementById("commentContent").value
-  var author = document.getElementById("commentAuthor").value
-
-  var commentTemplate = document.getElementById("comment-template").innerHTML
-  var commentTemplateFn = _.template(commentTemplate)
-  var mainDiv = document.getElementsByTagName('main')[0].innerHTML
-  var commentTemplateHTML = commentsTemplateFn({'comment': comment, 'author': author})
-  mainDiv.innerHTML += commentTemplateHTML
-
-}
-
 function createPost() {
 
   var title = document.getElementById("postTitle").value
@@ -36,5 +24,17 @@ function createPost() {
   var mainDiv = document.getElementsByTagName('main')[0].innerHTML
   var commentsTemplateHTML = commentsTemplateFn()
   mainDiv.innerHTML += commentsTemplateHTML
+
+}
+
+function postComment() {
+  var comment = document.getElementById("commentContent").value
+  var author = document.getElementById("commentAuthor").value
+
+  var commentTemplate = document.getElementById("comment-template").innerHTML
+  var commentTemplateFn = _.template(commentTemplate)
+  var mainDiv = document.getElementsByTagName('main')[0].innerHTML
+  var commentTemplateHTML = commentsTemplateFn({'comment': comment, 'author': author})
+  mainDiv.innerHTML += commentTemplateHTML
 
 }
