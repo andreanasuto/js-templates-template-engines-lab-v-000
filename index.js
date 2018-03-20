@@ -21,7 +21,7 @@ function createPost() {
 
   var commentsTemplate = document.getElementById("comments-template").innerHTML
   var commentsTemplateFn = _.template(commentsTemplate)
-  var mainDiv = document.getElementsByTagName('main')[0].innerHTML
+  var mainDiv = document.getElementsById("post")[0].innerHTML
   var commentsTemplateHTML = commentsTemplateFn()
   mainDiv += commentsTemplateHTML
 
