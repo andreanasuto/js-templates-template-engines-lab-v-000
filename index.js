@@ -31,7 +31,7 @@ function postComment() {
 
   var commentTemplate = document.getElementById("comment-template").innerHTML
   var commentTemplateFn = _.template(commentTemplate)
-  var mainDiv = document.getElementsById("comments")
+  var mainDiv = document.getElementById("comments")
   var commentTemplateHTML = commentTemplateFn({'comment': comment, 'author': author})
   mainDiv.innerHTML += commentTemplateHTML
 
