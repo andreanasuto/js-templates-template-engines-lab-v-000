@@ -25,13 +25,14 @@
 
       <script id="comment-template" type="text/x-lodash-template">
         <div id="comment">
-          <section> <%= comment %> </section>
-          <footer> <%= author %> </footer>
+          <section> <%- comment %> </section>
+          <footer> <%- author %> </footer>
         </div>
 
       </script>
 
       <script id="page-template" type="text/x-lodash-template">
+
         <div id="sidebar">
 
         </div>
@@ -39,15 +40,16 @@
         <div id="post">
 
         </div>
+
       </script>
 
       <script id="post-template" type="text/x-lodash-template">
 
 
           <article>
-          <header> <%= title %> </header>
-          <p> <%= content %> </p>
-          <footer> <%= author %> </footer>
+          <header> <%- title %> </header>
+          <p> <%- content %> </p>
+          <footer> <%- author %> </footer>
           </article>
 
       </script>
